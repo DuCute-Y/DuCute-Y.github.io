@@ -24,7 +24,7 @@
 <meta property="og:description" content="0x00 如何Python工作路径： 切换到blog路径12import os os.chdir(blogPath) # 博客目录    0x01  一些命令的封装12345678910# 博客的命令 可以去官网查看blogGen &#x3D; r&quot;hexo g -d&quot; # 更新本地缓存的命令blogPush&#x3D; r&quot;hexo d&quot; # 推送博客到github上的命令b">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-15T03:48:25.000Z">
-<meta property="article:modified_time" content="2023-10-15T04:02:59.569Z">
+<meta property="article:modified_time" content="2023-10-15T05:15:48.283Z">
 <meta property="article:author" content="小dudu">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -280,14 +280,13 @@
 
 
 
-<h2 id="0x02-创建新博客页面思路"><a href="#0x02-创建新博客页面思路" class="headerlink" title="0x02  创建新博客页面思路"></a>0x02  创建新博客页面思路</h2><pre><code class=" mermaid">graph TB
-open[用typora打开该文件]
+<h2 id="0x02-创建新博客页面思路"><a href="#0x02-创建新博客页面思路" class="headerlink" title="0x02  创建新博客页面思路"></a>0x02  创建新博客页面思路</h2><pre><code class=" mermaid">flowchart TB
+open[用typora打开该文件,上传图片]
 End(结束)
-Start(开始) --&gt;B[输入文件名（不含md）]--&gt;c&#123;&quot;本地文件存在该文件？&quot;&#125;
-c--&gt;|存在| 存在[将存在的数据粘贴到该文件] --&gt;open
-c--&gt;|不存在|open
-open --&gt; 修改[是否需要修改的，上传图片啊啥的]
-修改 --&gt; End(结束)
+Start(开始) --&gt;B[输入文件名 不含md]--&gt; c&#123;本地文件存在该文件&#125;
+c--&gt;|存在| g[将存在的数据粘贴到该文件] --&gt; open
+c--&gt; |不存在| open
+open --&gt; End(结束)
 </code></pre>
 
 
@@ -300,8 +299,6 @@ open --&gt; 修改[是否需要修改的，上传图片啊啥的]
 
 <h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><p>使用 pyinstaller 打包</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">pyinstaller  fileName.py<br></code></pre></td></tr></table></figure>
-
-<p>j</p>
 
                 
               </div>
